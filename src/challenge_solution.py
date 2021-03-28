@@ -17,13 +17,12 @@ def convert_ipv4_block_to_networks(request_response_content: dict=get_data_from_
     all_networks = sorted(all_networks, key=lambda net: net.num_addresses, reverse=True)
     return all_networks
 
-def check_if_ip_within_network_list(given_ip_address: str) -> bool:
+def check_if_ip_within_network_list(given_ip_address: str, all_networks: list) -> bool:
     """ 
-    Params: Accepts ip address in string format. 
+    Params: Accepts ip address in string format. List of all networks.
     Functionality: Converts each string into a valid Ipv4 Address. Compares it to the list of networks.
     Returns: bool; true if ip in list of network, false if not in list of networks.
     """
-    all_networks = convert_ipv4_block_to_networks()
     given_ip_address = create_ipv4_address(given_ip_address)
     for net in all_networks:
         if given_ip_address in net:
