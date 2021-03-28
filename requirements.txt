@@ -8,6 +8,7 @@ pluggy==0.13.1
 py==1.10.0
 pyparsing==2.4.7
 pytest==6.2.2
+python-dotenv==0.16.0
 requests==2.25.1
 toml==0.10.2
 urllib3==1.26.4

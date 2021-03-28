@@ -3,9 +3,13 @@ Author: David Bernal
 Date: March 27, 2021
 Description: Built Technologies Coding Challenge.
 """
+from dotenv.main import load_dotenv
 from src.convert_into_ip import create_ipv4_address
 from src.challenge_solution import check_if_ip_within_network_list, convert_ipv4_block_to_networks
 from src.data_requests import get_response, get_data
+import os
+
+load_dotenv()
 
 def user_interaction(network_list: list) -> None: 
     try:
@@ -26,7 +30,7 @@ def user_interaction(network_list: list) -> None:
 
 def main():
     # Given Variables 
-    url = ""
+    url = os.getenv('URL')
     # First Make Request
     make_request = get_response(url)
     # Extract content as Dictionary
