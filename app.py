@@ -26,7 +26,7 @@ def user_interaction(network_list: list) -> None:
 
 def main():
     # Given Variables 
-    url = "https://stat.ripe.net/data/country-resource-list/data.json?resource=US&v4_format=prefix"
+    url = ""
     # First Make Request
     make_request = get_response(url)
     # Extract content as Dictionary
